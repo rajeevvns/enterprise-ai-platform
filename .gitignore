@@ -9,10 +9,17 @@ __pycache__/
 .venv/
 venv/
 
-# Generated artifacts (not source — safe to regenerate)
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated artifacts
 logs/
 *.db
 results.json
 
 # OS
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
