@@ -16,6 +16,7 @@ venv/
 logs/
 *.db
 results.json
+*.log
 
 # OS
 .DS_Store
