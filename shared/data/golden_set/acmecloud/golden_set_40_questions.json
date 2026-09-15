@@ -1,0 +1,465 @@
+[
+  {
+    "id": "Q001",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What are the three workload classes supported by AcmeCloud?",
+    "expected_answer": "Development, Standard Production, and Critical Production.",
+    "expected_sources": [
+      "01_platform_overview.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q002",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the recommended Top-K for a standard RAG application?",
+    "expected_answer": "Top-K = 5.",
+    "expected_sources": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q003",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What are the six stages in the standard RAG flow?",
+    "expected_answer": "Document ingestion, chunking, embedding, indexing, retrieval, and grounded generation.",
+    "expected_sources": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q004",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What chunk size and overlap are recommended as the general baseline?",
+    "expected_answer": "800-character chunks with 150-character overlap.",
+    "expected_sources": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q005",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What authentication must new production workloads use under Security Policy v2?",
+    "expected_answer": "OAuth workload identity through the Enterprise AI Gateway.",
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q006",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "How long must production model and tool audit logs be retained under the active security policy?",
+    "expected_answer": "At least 180 days.",
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q007",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "Which model is preferred for high-complexity reasoning over Restricted data?",
+    "expected_answer": "Model-X.",
+    "expected_sources": [
+      "07_model_selection_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q008",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the Critical Production availability target?",
+    "expected_answer": "99.95% monthly availability.",
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q009",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the Critical Production support response target?",
+    "expected_answer": "30 minutes.",
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q010",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is Model-Y's input-token chargeback rate?",
+    "expected_answer": "$0.50 per 1 million input tokens.",
+    "expected_sources": [
+      "11_cost_pricing_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q011",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What was platform availability in Q2 2026?",
+    "expected_answer": "99.93%.",
+    "expected_sources": [
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q012",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What does the search API return if Top-K is not specified?",
+    "expected_answer": "3 results.",
+    "expected_sources": [
+      "15_platform_faq.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q013",
+    "difficulty": "medium",
+    "question_type": "version_reasoning",
+    "question": "Can a new production application created in 2026 use an API key for normal authentication?",
+    "expected_answer": "No. New Standard Production and Critical Production workloads must use OAuth workload identity. API keys are only allowed in development or for older production applications with an approved temporary migration exception.",
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q014",
+    "difficulty": "medium",
+    "question_type": "exception_reasoning",
+    "question": "Can PII ever be processed by an LLM on AcmeCloud?",
+    "expected_answer": "Yes, but only through the Enterprise AI Gateway with the Data Protection Profile enabled, an approved enterprise model, and an approved privacy assessment.",
+    "expected_sources": [
+      "06_data_privacy_policy.txt",
+      "15_platform_faq.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q015",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How did average retrieval latency change from Q1 to Q2 2026?",
+    "expected_answer": "It improved from 920 ms in Q1 to 610 ms in Q2, a reduction of 310 ms.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q016",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How did platform availability change from Q1 to Q2 2026?",
+    "expected_answer": "It improved from 99.72% to 99.93%, an increase of 0.21 percentage points.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q017",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "Did Q2 2026 platform availability meet the Standard Production and Critical Production targets?",
+    "expected_answer": "It met the Standard Production target of 99.9% but did not meet the Critical Production target of 99.95%.",
+    "expected_sources": [
+      "13_q2_platform_review.txt",
+      "10_platform_sla_slo.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q018",
+    "difficulty": "medium",
+    "question_type": "semantic",
+    "question": "Why are metadata such as version, status, and effective date important in this RAG system?",
+    "expected_answer": "They help distinguish current from superseded documents and prevent semantically similar old policies from being retrieved as authoritative answers.",
+    "expected_sources": [
+      "02_rag_architecture_guide.txt",
+      "12_q1_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q019",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "An AI agent deletes production data without authorization, but the service remains available. What severity is the incident?",
+    "expected_answer": "Severity 1, because an unauthorized destructive action by an AI agent is Severity 1 even if service availability remains unaffected.",
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q020",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "A production model has latency above 5 seconds for 20 consecutive minutes with no data exposure. What incident severity applies?",
+    "expected_answer": "Severity 2.",
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q021",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How does retrieval for a standard RAG application differ from retrieval for a research agent?",
+    "expected_answer": "Standard RAG recommends Top-K = 5. Research agents may retrieve up to 10 candidate chunks and rerank them before generating the final answer.",
+    "expected_sources": [
+      "02_rag_architecture_guide.txt",
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q022",
+    "difficulty": "medium",
+    "question_type": "policy_application",
+    "question": "Which controls are required before a Critical Production AI launch beyond the Standard Production requirements?",
+    "expected_answer": "Formal threat modelling, security sign-off, real-time operational monitoring, emergency stop or safe-disable testing, failure-mode exercises, and a named operational owner.",
+    "expected_sources": [
+      "08_production_deployment_checklist.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q023",
+    "difficulty": "medium",
+    "question_type": "semantic",
+    "question": "Why should teams not always select the cheapest model?",
+    "expected_answer": "Because the selected model must also meet security-classification, quality, and latency requirements.",
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q024",
+    "difficulty": "medium",
+    "question_type": "policy_application",
+    "question": "Can Model-Y process Restricted data?",
+    "expected_answer": "No. Model-Y is not approved for Restricted data.",
+    "expected_sources": [
+      "07_model_selection_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q025",
+    "difficulty": "medium",
+    "question_type": "temporal",
+    "question": "What is the latest reported monthly query volume in the corpus?",
+    "expected_answer": "2.1 million queries per month at the end of Q2 2026.",
+    "expected_sources": [
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q026",
+    "difficulty": "medium",
+    "question_type": "trend",
+    "question": "What problems in Q1 motivated the introduction of metadata filtering?",
+    "expected_answer": "Semantically similar policy versions were causing retrieval failures, so metadata filtering for policy status and effective date was introduced.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q027",
+    "difficulty": "medium",
+    "question_type": "roadmap_awareness",
+    "question": "Is the agentic retrieval planner already an active platform capability according to this corpus?",
+    "expected_answer": "No. It is listed as a planned Q4 2026 capability and must not be described as already available.",
+    "expected_sources": [
+      "14_product_roadmap.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q028",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "A new Critical Production agent will process Restricted customer data. Name three categories of controls that must be satisfied before launch.",
+    "expected_answer": "It must satisfy Critical Production deployment controls, Restricted-data privacy requirements including Gateway and approved model, and agent-specific controls such as documented tool permissions and human-approval points.",
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt",
+      "06_data_privacy_policy.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q029",
+    "difficulty": "hard",
+    "question_type": "multi_hop",
+    "question": "Which model should be selected for high-complexity reasoning over Restricted data, and what is its input-token chargeback rate?",
+    "expected_answer": "Model-X should be selected because it is preferred for high-complexity reasoning and approved for Restricted data. Its input-token chargeback rate is $4.00 per 1 million tokens.",
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q030",
+    "difficulty": "hard",
+    "question_type": "multi_hop",
+    "question": "A team wants the cheapest model for Restricted-data classification. Which listed model is cheapest among the models approved for Restricted data?",
+    "expected_answer": "Model-Z is cheaper than Model-X among the Restricted-data-approved models. Model-Z costs $2.00 per 1 million input tokens, while Model-X costs $4.00. Model-Y is cheaper overall but is not approved for Restricted data.",
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q031",
+    "difficulty": "hard",
+    "question_type": "version_conflict",
+    "question": "An application launched in 2025 still uses an API key. Does that prove a new application launched in 2026 may also use API-key authentication? Explain.",
+    "expected_answer": "No. The old policy allowed API keys, but it is superseded. The active 2026 policy requires OAuth workload identity for new production workloads. Only pre-2026 applications may temporarily keep API keys under an approved migration exception.",
+    "expected_sources": [
+      "04_ai_security_policy_v1.txt",
+      "05_ai_security_policy_v2.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q032",
+    "difficulty": "hard",
+    "question_type": "multi_document_synthesis",
+    "question": "Design the minimum governance and security controls for a Critical Production agent that can modify production systems and process Restricted data.",
+    "expected_answer": "It should use OAuth workload identity and the Enterprise AI Gateway; use an approved model with required Data Privacy controls; enforce least-privilege tool permissions and explicit allow-lists; require human approval for destructive actions; complete threat modelling and security sign-off; enable real-time monitoring, audit logs, emergency stop controls, and incident-response procedures; and document tool permissions and operational ownership.",
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt",
+      "08_production_deployment_checklist.txt",
+      "09_incident_response_runbook.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q033",
+    "difficulty": "hard",
+    "question_type": "numeric_reasoning",
+    "question": "By how much did monthly query volume grow from Q1 to Q2 2026, both in absolute terms and approximately as a percentage?",
+    "expected_answer": "It grew from 1.2 million to 2.1 million, an increase of 0.9 million queries, approximately 75%.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q034",
+    "difficulty": "hard",
+    "question_type": "numeric_reasoning",
+    "question": "Which improved more proportionally from Q1 to Q2 2026: average retrieval latency or the RAG answer-quality benchmark?",
+    "expected_answer": "Average retrieval latency improved more proportionally: it fell from 920 ms to 610 ms, about a 33.7% reduction. Answer quality improved from 78% to 86%, about a 10.3% relative increase.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q035",
+    "difficulty": "hard",
+    "question_type": "scenario_multi_hop",
+    "question": "A Critical Production workload reports 99.92% availability and 700 ms p95 retrieval latency. Which SLOs are met and which are missed?",
+    "expected_answer": "It meets the Critical Production latency SLO because 700 ms is below 800 ms, but misses the availability target because 99.92% is below 99.95%.",
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q036",
+    "difficulty": "hard",
+    "question_type": "scenario_multi_hop",
+    "question": "An agent accidentally exposes Restricted data and also causes model latency above 5 seconds. What incident severity should be used and what should the first response action be?",
+    "expected_answer": "Severity 1 should be used because Restricted-data exposure qualifies as Severity 1 and takes precedence over the latency-related Severity 2 condition. The first response action is to stop or isolate the affected AI workflow.",
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q037",
+    "difficulty": "hard",
+    "question_type": "architecture_reasoning",
+    "question": "Why is the Q4 2026 agentic retrieval planner a logical response to the platform's earlier evaluation problems?",
+    "expected_answer": "Q1 showed poor performance on hard multi-document questions, and Q2 reported improvement from reranking while planning a pilot for agentic retrieval. The Q4 planner targets questions where one retrieval pass is unlikely to gather all required evidence, directly addressing those multi-document and multi-hop failures.",
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q038",
+    "difficulty": "hard",
+    "question_type": "policy_exception",
+    "question": "A Development team wants to use a short-lived API key while experimenting with Restricted data. Is that allowed?",
+    "expected_answer": "No. Development may use short-lived API keys only when no Restricted data is processed. Restricted data must use the Enterprise AI Gateway and an approved enterprise model under the active security and privacy policies.",
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q039",
+    "difficulty": "hard",
+    "question_type": "cross_document_reasoning",
+    "question": "A Standard Production agent wants to delete production records automatically without human approval. Is this compliant if the tool is on its allow-list?",
+    "expected_answer": "No. An allow-listed tool is not sufficient. Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting production data.",
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "Q040",
+    "difficulty": "hard",
+    "question_type": "unanswerable",
+    "question": "What was AcmeCloud's total company revenue in FY2025?",
+    "expected_answer": "The corpus does not provide AcmeCloud company revenue for FY2025, so the question cannot be answered from the available documents.",
+    "expected_sources": [],
+    "answerable": false
+  }
+]

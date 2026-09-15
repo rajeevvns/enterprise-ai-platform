@@ -1,0 +1,25 @@
+ACMECLOUD PRODUCTION DEPLOYMENT CHECKLIST
+Version: 1.5
+Status: Active
+
+Before Standard Production launch:
+- Use Enterprise AI Gateway authentication.
+- Comply with the active AI Security Policy.
+- Complete prompt and retrieval evaluation using an approved golden set.
+- Enable audit logging.
+- Define rollback and incident-response procedures.
+- Verify least-privilege access.
+- Document known failure modes.
+- Enable monitoring and alerting.
+
+Before Critical Production launch, all Standard requirements apply, plus:
+- Complete formal threat modelling.
+- Obtain security sign-off.
+- Define real-time operational monitoring.
+- Test emergency stop or safe-disable controls.
+- Complete failure-mode exercises.
+- Identify a named operational owner.
+
+Restricted-data applications must also satisfy the Data Privacy Policy and use an approved enterprise model.
+
+Agentic applications must document tool permissions and human-approval points before production launch.

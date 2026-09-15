@@ -1,0 +1,22 @@
+ACMECLOUD PLATFORM REVIEW — Q1 2026
+Reporting Period: January–March 2026
+Status: Historical
+
+Q1 metrics:
+- Monthly query volume at quarter end: 1.2 million
+- Platform availability: 99.72%
+- Average retrieval latency: 920 ms
+- p95 retrieval latency: 1.45 seconds
+- RAG answer-quality benchmark: 78%
+- Production AI applications: 34
+
+Major issues:
+- Two incidents were caused by stale indexes.
+- Several teams continued using legacy API-key authentication.
+- Hard multi-document questions performed poorly.
+- Retrieval failures were frequently caused by semantically similar policy versions.
+
+Planned actions:
+- Migrate production teams to OAuth.
+- Add metadata filtering for versioned policies.
+- Improve multi-document evaluation coverage.

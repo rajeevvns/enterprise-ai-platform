@@ -1,0 +1,25 @@
+ACMECLOUD PLATFORM SLA AND SLO
+Version: 2.0
+Effective Date: 2026-04-01
+Status: Active
+
+Development:
+- Availability: 99.0%
+- Support response: 8 business hours
+- Retrieval latency SLO: p95 below 2.5 seconds
+
+Standard Production:
+- Availability: 99.9%
+- Support response: 2 hours
+- Retrieval latency SLO: p95 below 1.2 seconds
+
+Critical Production:
+- Availability: 99.95%
+- Support response: 30 minutes
+- Retrieval latency SLO: p95 below 800 milliseconds
+
+Availability is measured monthly.
+
+A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency target is met.
+
+Application-specific failures caused by customer-owned prompts, source data, or business logic are not counted as platform availability failures.

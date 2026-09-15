@@ -1,0 +1,15 @@
+ACMECLOUD ENTERPRISE AI PLATFORM — OVERVIEW
+Version: 1.0
+Status: Active
+
+AcmeCloud is an internal platform for Retrieval-Augmented Generation (RAG) and Agentic AI applications. It provides an Enterprise AI Gateway, embedding services, vector search, approved-model access, audit logging, evaluation tooling, and policy enforcement.
+
+Workload classes are Development, Standard Production, and Critical Production.
+
+All production traffic must pass through the Enterprise AI Gateway. The gateway provides authentication, model routing, request logging, policy enforcement, rate limits, and usage reporting.
+
+Standard RAG applications retrieve context and ask an LLM to generate a grounded answer. Agentic applications may plan multiple steps, call tools, query multiple data sources, and take approved actions.
+
+For standard RAG, the recommended retrieval setting is Top-K = 5. The search API returns 3 results when the caller does not explicitly provide Top-K. Research agents may retrieve up to 10 candidate chunks before reranking.
+
+Product teams remain responsible for prompts, data sources, business logic, and application-specific safeguards.

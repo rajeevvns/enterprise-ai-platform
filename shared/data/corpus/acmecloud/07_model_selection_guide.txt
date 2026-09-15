@@ -1,0 +1,16 @@
+ACMECLOUD MODEL SELECTION GUIDE
+Version: 2.2
+Status: Active
+
+Model-X is recommended for high-complexity reasoning, multi-document synthesis, and difficult planning tasks.
+Model-Y is recommended for low-cost summarization, classification, extraction, and straightforward Q&A.
+Model-Z is recommended for code generation and software engineering.
+
+Approved Enterprise Model List:
+- Model-X: Public, Internal, Customer Confidential, Restricted.
+- Model-Y: Public, Internal, Customer Confidential. Not Restricted.
+- Model-Z: Public, Internal, Customer Confidential, Restricted.
+
+For high-complexity reasoning over Restricted data, Model-X is preferred.
+
+Teams should choose the least expensive model that still meets quality, security, and latency requirements.
