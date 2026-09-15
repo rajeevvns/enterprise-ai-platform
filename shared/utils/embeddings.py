@@ -51,7 +51,12 @@ def load_corpus(corpus_dir: pathlib.Path, strategy: str = "paragraph") -> list[d
     Returns:
         List of chunk dicts: {chunk_id, doc_id, text}
     """
-    chunk_fn = chunk_by_paragraph if strategy == "paragraph" else chunk_by_sentence
+    strategies = {"paragraph": chunk_by_paragraph, "sentence": chunk_by_sentence}
+    if strategy not in strategies:
+        raise ValueError(
+            f"Unknown chunking strategy {strategy!r} — expected 'paragraph' or 'sentence'"
+        )
+    chunk_fn = strategies[strategy]
     chunks = []
     doc_paths = sorted(corpus_dir.glob("*.txt"))
     for path in doc_paths:

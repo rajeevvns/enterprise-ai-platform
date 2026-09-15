@@ -17,6 +17,11 @@ Run (from any directory):
   export OPENAI_API_KEY=<your-key>
   python learning/week06/acmecloud_rag_eval.py
 
+Optional env var:
+  OPENAI_BASE_URL   Override the API base URL (defaults to the Vocareum proxy,
+                    https://openai.vocareum.com/v1 — set this to point at the
+                    real OpenAI API instead).
+
 Jupyter (avoid asyncio.run in a running loop):
   import acmecloud_rag_eval      # then call:
   results, embed_cost = await acmecloud_rag_eval.run_eval()
@@ -163,7 +168,7 @@ async def run_eval() -> tuple[list[dict], float]:
     """Run the full evaluation. Returns (results, embed_cost_usd)."""
 
     # 1 — Load & embed corpus
-    all_chunks = load_corpus(CORPUS_DIR, strategy="")
+    all_chunks = load_corpus(CORPUS_DIR, strategy="paragraph")
 
     print(f"Embedding {len(all_chunks)} chunks …")
     t0         = time.perf_counter()
