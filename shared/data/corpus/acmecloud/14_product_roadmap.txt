@@ -1,0 +1,21 @@
+ACMECLOUD PRODUCT ROADMAP
+Version: H2 2026
+Status: Planned
+
+Q3 2026 planned:
+- Hybrid retrieval combining vector and keyword search.
+- Metadata-aware retrieval templates.
+- Built-in reranking.
+- Golden-set evaluation dashboards.
+- Source-grounded answer tracing.
+
+Q4 2026 planned:
+- Agentic retrieval planner for multi-hop questions.
+- Policy-resolution tool selecting the active policy version.
+- Cost-aware model selection.
+- Multi-source research workflows.
+- Agent execution policy checks.
+
+The agentic retrieval planner is intended for questions where one retrieval pass is unlikely to collect all required evidence.
+
+Roadmap items are planned and must not be described as already available unless separately confirmed by an active product document.

@@ -1,0 +1,2500 @@
+[
+  {
+    "id": "Q001",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What are the three workload classes supported by AcmeCloud?",
+    "expected_answer": "Development, Standard Production, and Critical Production.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "01_platform_overview.txt::s2",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Workload classes are Development, Standard Production, and Critical Production."
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s0",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "ACMECLOUD DATA PRIVACY POLICY\nVersion: 3.0\nStatus: Active\n\nData is classified as Public, Internal, Customer Confidential"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s0",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "ACMECLOUD PRODUCTION DEPLOYMENT CHECKLIST\nVersion: 1.5\nStatus: Active\n\nBefore Standard Production launch:\n- Use Enterpri"
+      }
+    ],
+    "expected_sources": [
+      "01_platform_overview.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "06_data_privacy_policy.txt",
+      "08_production_deployment_checklist.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "01_platform_overview.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The three workload classes supported by AcmeCloud are Development, Standard Production, and Critical Production.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly lists all three workload classes supported by AcmeCloud as expected.",
+    "gen_usage": {
+      "input_tokens": 445,
+      "output_tokens": 19,
+      "cost_usd": 7.815e-05,
+      "latency_s": 3.121
+    },
+    "judge_usage": {
+      "input_tokens": 142,
+      "output_tokens": 29,
+      "cost_usd": 0.000774
+    }
+  },
+  {
+    "id": "Q002",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the recommended Top-K for a standard RAG application?",
+    "expected_answer": "Top-K = 5.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "15_platform_faq.txt::s2",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: What Top-K should standard RAG normally use?"
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s2",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "The default recommendation for standard RAG retrieval is Top-K = 5."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s7",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "For standard RAG, the recommended retrieval setting is Top-K = 5."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s16",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Standard RAG is preferred for straightforward retrieval."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s3",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Top-K = 5, although teams should tune using evaluation results."
+      }
+    ],
+    "expected_sources": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The recommended Top-K for a standard RAG application is 5.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer matches the expected answer exactly.",
+    "gen_usage": {
+      "input_tokens": 185,
+      "output_tokens": 14,
+      "cost_usd": 3.615e-05,
+      "latency_s": 2.35
+    },
+    "judge_usage": {
+      "input_tokens": 135,
+      "output_tokens": 21,
+      "cost_usd": 0.000657
+    }
+  },
+  {
+    "id": "Q003",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What are the six stages in the standard RAG flow?",
+    "expected_answer": "Document ingestion, chunking, embedding, indexing, retrieval, and grounded generation.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s0",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "ACMECLOUD RAG ARCHITECTURE GUIDE\nVersion: 2.1\nStatus: Active\n\nA standard RAG flow has six stages: document ingestion, ch"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s2",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: What Top-K should standard RAG normally use?"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s16",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Standard RAG is preferred for straightforward retrieval."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s1",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "This creates risks beyond standard RAG because an agent can affect external systems."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s5",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Standard RAG applications retrieve context and ask an LLM to generate a grounded answer."
+      }
+    ],
+    "expected_sources": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "03_agentic_ai_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The six stages in the standard RAG flow are: document ingestion, chunking, embedding, indexing, retrieval, and grounded generation.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer matches the expected answer exactly, listing all six stages correctly.",
+    "gen_usage": {
+      "input_tokens": 221,
+      "output_tokens": 27,
+      "cost_usd": 4.935e-05,
+      "latency_s": 2.626
+    },
+    "judge_usage": {
+      "input_tokens": 157,
+      "output_tokens": 27,
+      "cost_usd": 0.000795
+    }
+  },
+  {
+    "id": "Q004",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What chunk size and overlap are recommended as the general baseline?",
+    "expected_answer": "800-character chunks with 150-character overlap.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s1",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "The recommended baseline for general enterprise text is 800-character chunks with 150-character overlap."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s9",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Research agents may retrieve up to 10 candidate chunks before reranking."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s7",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "For standard RAG, the recommended retrieval setting is Top-K = 5."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s4",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Research agents may retrieve up to 10 candidate chunks and should rerank evidence before final answer generation."
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s2",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "The default recommendation for standard RAG retrieval is Top-K = 5."
+      }
+    ],
+    "expected_sources": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "sources_hit": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The recommended baseline for general enterprise text is 800-character chunks with 150-character overlap.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer matches the expected answer exactly.",
+    "gen_usage": {
+      "input_tokens": 206,
+      "output_tokens": 18,
+      "cost_usd": 4.17e-05,
+      "latency_s": 2.443
+    },
+    "judge_usage": {
+      "input_tokens": 142,
+      "output_tokens": 18,
+      "cost_usd": 0.000642
+    }
+  },
+  {
+    "id": "Q005",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What authentication must new production workloads use under Security Policy v2?",
+    "expected_answer": "OAuth workload identity through the Enterprise AI Gateway.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "15_platform_faq.txt::s6",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "New production workloads must use OAuth."
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s1",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "New Standard Production and Critical Production applications must use OAuth workload identity through the Enterprise AI "
+      },
+      {
+        "chunk_id": "04_ai_security_policy_v1.txt::s6",
+        "doc_id": "04_ai_security_policy_v1.txt",
+        "preview": "This policy was replaced by AI Security Policy version 2.0."
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s0",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "ACMECLOUD AI SECURITY POLICY\nVersion: 2.0\nEffective Date: 2026-01-15\nStatus: Active\n\nAPI-key authentication is deprecate"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s5",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Development may use short-lived API keys under the active Security Policy."
+      }
+    ],
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "retrieved_docs": [
+      "04_ai_security_policy_v1.txt",
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "New production workloads must use OAuth under Security Policy v2.",
+    "judge_score": 1,
+    "judge_reason": "The RAG answer mentions OAuth but omits 'workload identity through the Enterprise AI Gateway,' which is crucial for full correctness.",
+    "gen_usage": {
+      "input_tokens": 214,
+      "output_tokens": 12,
+      "cost_usd": 3.93e-05,
+      "latency_s": 2.149
+    },
+    "judge_usage": {
+      "input_tokens": 136,
+      "output_tokens": 34,
+      "cost_usd": 0.000816
+    }
+  },
+  {
+    "id": "Q006",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "How long must production model and tool audit logs be retained under the active security policy?",
+    "expected_answer": "At least 180 days.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s7",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Production applications must retain model and tool audit logs for at least 180 days."
+      },
+      {
+        "chunk_id": "04_ai_security_policy_v1.txt::s3",
+        "doc_id": "04_ai_security_policy_v1.txt",
+        "preview": "Production applications must maintain audit logs for model requests and responses for at least 90 days."
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s7",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "Logs containing Customer Confidential or Restricted data must follow the retention period approved by the privacy assess"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s10",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "Preserve audit logs and evidence."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s5",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Development may use short-lived API keys under the active Security Policy."
+      }
+    ],
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "retrieved_docs": [
+      "04_ai_security_policy_v1.txt",
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt",
+      "09_incident_response_runbook.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Production applications must retain model and tool audit logs for at least 180 days.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly states the retention period of at least 180 days for production model and tool audit logs, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 199,
+      "output_tokens": 16,
+      "cost_usd": 3.945e-05,
+      "latency_s": 2.355
+    },
+    "judge_usage": {
+      "input_tokens": 141,
+      "output_tokens": 39,
+      "cost_usd": 0.0008910000000000001
+    }
+  },
+  {
+    "id": "Q007",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "Which model is preferred for high-complexity reasoning over Restricted data?",
+    "expected_answer": "Model-X.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "07_model_selection_guide.txt::s7",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "For high-complexity reasoning over Restricted data, Model-X is preferred."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s0",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "ACMECLOUD MODEL SELECTION GUIDE\nVersion: 2.2\nStatus: Active\n\nModel-X is recommended for high-complexity reasoning, multi"
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s6",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Restricted data may only be processed by models on the Approved Enterprise Model List."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s7",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Agents using Restricted data must use an approved enterprise model and the Enterprise AI Gateway."
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s4",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "Restricted data may be processed only through the Enterprise AI Gateway using an approved enterprise model and with the "
+      }
+    ],
+    "expected_sources": [
+      "07_model_selection_guide.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt",
+      "07_model_selection_guide.txt"
+    ],
+    "sources_hit": [
+      "07_model_selection_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Model-X is preferred for high-complexity reasoning over Restricted data.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly identifies Model-X as the preferred model for high-complexity reasoning over Restricted data, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 234,
+      "output_tokens": 14,
+      "cost_usd": 4.35e-05,
+      "latency_s": 2.367
+    },
+    "judge_usage": {
+      "input_tokens": 133,
+      "output_tokens": 35,
+      "cost_usd": 0.0008190000000000001
+    }
+  },
+  {
+    "id": "Q008",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the Critical Production availability target?",
+    "expected_answer": "99.95% monthly availability.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s1",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency targ"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s2",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Workload classes are Development, Standard Production, and Critical Production."
+      }
+    ],
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "08_production_deployment_checklist.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "10_platform_sla_slo.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The Critical Production availability target is 99.95%.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly states the Critical Production availability target as 99.95%.",
+    "gen_usage": {
+      "input_tokens": 343,
+      "output_tokens": 11,
+      "cost_usd": 5.8049999999999995e-05,
+      "latency_s": 2.333
+    },
+    "judge_usage": {
+      "input_tokens": 129,
+      "output_tokens": 29,
+      "cost_usd": 0.000735
+    }
+  },
+  {
+    "id": "Q009",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is the Critical Production support response target?",
+    "expected_answer": "30 minutes.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s1",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency targ"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s2",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Workload classes are Development, Standard Production, and Critical Production."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s9",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Critical Production agents require real-time monitoring and an emergency stop mechanism."
+      }
+    ],
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "03_agentic_ai_architecture_guide.txt",
+      "08_production_deployment_checklist.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "10_platform_sla_slo.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide the correct response time of 30 minutes.",
+    "gen_usage": {
+      "input_tokens": 222,
+      "output_tokens": 8,
+      "cost_usd": 3.81e-05,
+      "latency_s": 2.204
+    },
+    "judge_usage": {
+      "input_tokens": 123,
+      "output_tokens": 24,
+      "cost_usd": 0.000657
+    }
+  },
+  {
+    "id": "Q010",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What is Model-Y's input-token chargeback rate?",
+    "expected_answer": "$0.50 per 1 million input tokens.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s0",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "ACMECLOUD MODEL COST AND PRICING GUIDE\nVersion: 2026-Q2\nStatus: Active\n\nInternal chargeback per 1 million tokens:\n\nModel"
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s4",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "- Model-Y: Public, Internal, Customer Confidential."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s7",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "- Cost-aware model selection."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s1",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "Model-Y is recommended for low-cost summarization, classification, extraction, and straightforward Q&A."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s4",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "The gateway provides authentication, model routing, request logging, policy enforcement, rate limits, and usage reportin"
+      }
+    ],
+    "expected_sources": [
+      "11_cost_pricing_guide.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "11_cost_pricing_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Model-Y's input-token chargeback rate is $0.50 per 1 million tokens.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer matches the expected answer exactly in terms of the chargeback rate and the unit of measurement.",
+    "gen_usage": {
+      "input_tokens": 297,
+      "output_tokens": 19,
+      "cost_usd": 5.595e-05,
+      "latency_s": 2.525
+    },
+    "judge_usage": {
+      "input_tokens": 143,
+      "output_tokens": 30,
+      "cost_usd": 0.000789
+    }
+  },
+  {
+    "id": "Q011",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What was platform availability in Q2 2026?",
+    "expected_answer": "99.93%.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s2",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "Application-specific failures caused by customer-owned prompts, source data, or business logic are not counted as platfo"
+      }
+    ],
+    "expected_sources": [
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "10_platform_sla_slo.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Platform availability in Q2 2026 was 99.93%.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer matches the expected answer exactly.",
+    "gen_usage": {
+      "input_tokens": 518,
+      "output_tokens": 14,
+      "cost_usd": 8.609999999999999e-05,
+      "latency_s": 2.455
+    },
+    "judge_usage": {
+      "input_tokens": 132,
+      "output_tokens": 21,
+      "cost_usd": 0.000648
+    }
+  },
+  {
+    "id": "Q012",
+    "difficulty": "easy",
+    "question_type": "direct_fact",
+    "question": "What does the search API return if Top-K is not specified?",
+    "expected_answer": "3 results.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "01_platform_overview.txt::s8",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "The search API returns 3 results when the caller does not explicitly provide Top-K."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s0",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "ACMECLOUD ENTERPRISE AI PLATFORM \u2014 FAQ\nVersion: 1.8\nStatus: Active\n\nQ: What happens if Top-K is not specified?"
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s2",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "The default recommendation for standard RAG retrieval is Top-K = 5."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s1",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: The search API returns 3 results."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s3",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Top-K = 5, although teams should tune using evaluation results."
+      }
+    ],
+    "expected_sources": [
+      "15_platform_faq.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "15_platform_faq.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The search API returns 3 results when the caller does not explicitly provide Top-K.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly states that the search API returns 3 results if Top-K is not specified, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 208,
+      "output_tokens": 17,
+      "cost_usd": 4.14e-05,
+      "latency_s": 2.395
+    },
+    "judge_usage": {
+      "input_tokens": 136,
+      "output_tokens": 37,
+      "cost_usd": 0.000852
+    }
+  },
+  {
+    "id": "Q013",
+    "difficulty": "medium",
+    "question_type": "version_reasoning",
+    "question": "Can a new production application created in 2026 use an API key for normal authentication?",
+    "expected_answer": "No. New Standard Production and Critical Production workloads must use OAuth workload identity. API keys are only allowed in development or for older production applications with an approved temporary migration exception.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s2",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Existing production applications created before 2026-01-15 may temporarily continue using API keys only under an approve"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s7",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Older production applications may use API keys only with an approved temporary migration exception."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s4",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: Can I use API keys?"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s6",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "New production workloads must use OAuth."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s5",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Development may use short-lived API keys under the active Security Policy."
+      }
+    ],
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide any information related to the question or expected answer.",
+    "gen_usage": {
+      "input_tokens": 191,
+      "output_tokens": 8,
+      "cost_usd": 3.345e-05,
+      "latency_s": 2.247
+    },
+    "judge_usage": {
+      "input_tokens": 162,
+      "output_tokens": 25,
+      "cost_usd": 0.000786
+    }
+  },
+  {
+    "id": "Q014",
+    "difficulty": "medium",
+    "question_type": "exception_reasoning",
+    "question": "Can PII ever be processed by an LLM on AcmeCloud?",
+    "expected_answer": "Yes, but only through the Enterprise AI Gateway with the Data Protection Profile enabled, an approved enterprise model, and an approved privacy assessment.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "15_platform_faq.txt::s11",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: Can PII ever be processed by an LLM?"
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s6",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "PII may be processed by an LLM only when all are true: the Enterprise AI Gateway is used, the Data Protection Profile is"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s8",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: Can I send customer data to a public external LLM?"
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s2",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "Customer Confidential data must be processed through the Enterprise AI Gateway."
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s4",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "Restricted data may be processed only through the Enterprise AI Gateway using an approved enterprise model and with the "
+      }
+    ],
+    "expected_sources": [
+      "06_data_privacy_policy.txt",
+      "15_platform_faq.txt"
+    ],
+    "retrieved_docs": [
+      "06_data_privacy_policy.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "06_data_privacy_policy.txt",
+      "15_platform_faq.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Yes, PII may be processed by an LLM on AcmeCloud only when all are true: the Enterprise AI Gateway is used, the Data Protection Profile is enabled, the model is approved, and the business use case has an approved privacy assessment.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer fully matches the expected answer, including all conditions for processing PII on AcmeCloud.",
+    "gen_usage": {
+      "input_tokens": 227,
+      "output_tokens": 51,
+      "cost_usd": 6.465e-05,
+      "latency_s": 2.407
+    },
+    "judge_usage": {
+      "input_tokens": 195,
+      "output_tokens": 30,
+      "cost_usd": 0.0009450000000000001
+    }
+  },
+  {
+    "id": "Q015",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How did average retrieval latency change from Q1 to Q2 2026?",
+    "expected_answer": "It improved from 920 ms in Q1 to 610 ms in Q2, a reduction of 310 ms.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s5",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "Q4 2026 planned:\n- Agentic retrieval planner for multi-hop questions."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s0",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "ACMECLOUD PRODUCT ROADMAP\nVersion: H2 2026\nStatus: Planned\n\nQ3 2026 planned:\n- Hybrid retrieval combining vector and key"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s5",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "- Partial retrieval degradation affecting production."
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "09_incident_response_runbook.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The average retrieval latency decreased from 920 ms in Q1 2026 to 610 ms in Q2 2026.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly states the change in average retrieval latency from Q1 to Q2 2026.",
+    "gen_usage": {
+      "input_tokens": 394,
+      "output_tokens": 26,
+      "cost_usd": 7.47e-05,
+      "latency_s": 2.701
+    },
+    "judge_usage": {
+      "input_tokens": 168,
+      "output_tokens": 30,
+      "cost_usd": 0.000864
+    }
+  },
+  {
+    "id": "Q016",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How did platform availability change from Q1 to Q2 2026?",
+    "expected_answer": "It improved from 99.72% to 99.93%, an increase of 0.21 percentage points.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s2",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "Application-specific failures caused by customer-owned prompts, source data, or business logic are not counted as platfo"
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "10_platform_sla_slo.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Platform availability increased from 99.72% in Q1 2026 to 99.93% in Q2 2026.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer accurately describes the change in platform availability from Q1 to Q2 2026.",
+    "gen_usage": {
+      "input_tokens": 522,
+      "output_tokens": 28,
+      "cost_usd": 9.51e-05,
+      "latency_s": 5.434
+    },
+    "judge_usage": {
+      "input_tokens": 169,
+      "output_tokens": 29,
+      "cost_usd": 0.000855
+    }
+  },
+  {
+    "id": "Q017",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "Did Q2 2026 platform availability meet the Standard Production and Critical Production targets?",
+    "expected_answer": "It met the Standard Production target of 99.9% but did not meet the Critical Production target of 99.95%.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s1",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency targ"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      }
+    ],
+    "expected_sources": [
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "08_production_deployment_checklist.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The Q2 2026 platform availability met the Standard Production target of 99.9% but did not meet the Critical Production target of 99.95%.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer is fully correct as it matches the expected answer exactly.",
+    "gen_usage": {
+      "input_tokens": 446,
+      "output_tokens": 33,
+      "cost_usd": 8.669999999999999e-05,
+      "latency_s": 3.114
+    },
+    "judge_usage": {
+      "input_tokens": 178,
+      "output_tokens": 26,
+      "cost_usd": 0.000846
+    }
+  },
+  {
+    "id": "Q018",
+    "difficulty": "medium",
+    "question_type": "semantic",
+    "question": "Why are metadata such as version, status, and effective date important in this RAG system?",
+    "expected_answer": "They help distinguish current from superseded documents and prevent semantically similar old policies from being retrieved as authoritative answers.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s1",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "- Metadata filtering was introduced for policy status and effective date."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s16",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Standard RAG is preferred for straightforward retrieval."
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s3",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "Applications should preserve metadata including source document, document type, publication date, version, and status."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s2",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: What Top-K should standard RAG normally use?"
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s1",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "This creates risks beyond standard RAG because an agent can affect external systems."
+      }
+    ],
+    "expected_sources": [
+      "02_rag_architecture_guide.txt",
+      "12_q1_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "02_rag_architecture_guide.txt",
+      "03_agentic_ai_architecture_guide.txt",
+      "13_q2_platform_review.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "source_recall": 0.5,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the importance of metadata in distinguishing current from superseded documents.",
+    "gen_usage": {
+      "input_tokens": 195,
+      "output_tokens": 8,
+      "cost_usd": 3.405e-05,
+      "latency_s": 2.653
+    },
+    "judge_usage": {
+      "input_tokens": 151,
+      "output_tokens": 27,
+      "cost_usd": 0.000777
+    }
+  },
+  {
+    "id": "Q019",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "An AI agent deletes production data without authorization, but the service remains available. What severity is the incident?",
+    "expected_answer": "Severity 1, because an unauthorized destructive action by an AI agent is Severity 1 even if service availability remains unaffected.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s19",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "A service can remain technically available and still have a Severity 1 incident if an AI agent performs an unauthorized "
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s1",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "- Unauthorized destructive action by an AI agent."
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s0",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "ACMECLOUD AI INCIDENT RESPONSE RUNBOOK\nVersion: 2.0\nStatus: Active\n\nSeverity 1 includes:\n- Exposure of Customer Confiden"
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s6",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting p"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s2",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "- Complete Enterprise AI Gateway outage affecting production."
+      }
+    ],
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "09_incident_response_runbook.txt"
+    ],
+    "sources_hit": [
+      "09_incident_response_runbook.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The incident is a Severity 1 incident because an AI agent performed an unauthorized destructive action.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly identifies the incident as Severity 1 due to the unauthorized destructive action by an AI agent, aligning with the expected answer.",
+    "gen_usage": {
+      "input_tokens": 243,
+      "output_tokens": 18,
+      "cost_usd": 4.7249999999999997e-05,
+      "latency_s": 2.286
+    },
+    "judge_usage": {
+      "input_tokens": 165,
+      "output_tokens": 40,
+      "cost_usd": 0.000975
+    }
+  },
+  {
+    "id": "Q020",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "A production model has latency above 5 seconds for 20 consecutive minutes with no data exposure. What incident severity applies?",
+    "expected_answer": "Severity 2.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s4",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "Severity 2 includes:\n- Model latency above 5 seconds for more than 15 consecutive minutes."
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s1",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency targ"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s3",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "- One Severity 2 incident involved partial retrieval degradation."
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s0",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "ACMECLOUD AI INCIDENT RESPONSE RUNBOOK\nVersion: 2.0\nStatus: Active\n\nSeverity 1 includes:\n- Exposure of Customer Confiden"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s19",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "A service can remain technically available and still have a Severity 1 incident if an AI agent performs an unauthorized "
+      }
+    ],
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "retrieved_docs": [
+      "09_incident_response_runbook.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "09_incident_response_runbook.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The incident severity that applies is Severity 2, as the model latency is above 5 seconds for more than 15 consecutive minutes.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly identifies the incident severity as Severity 2, matching the expected answer and providing a valid rationale.",
+    "gen_usage": {
+      "input_tokens": 254,
+      "output_tokens": 27,
+      "cost_usd": 5.43e-05,
+      "latency_s": 2.776
+    },
+    "judge_usage": {
+      "input_tokens": 157,
+      "output_tokens": 32,
+      "cost_usd": 0.0008550000000000001
+    }
+  },
+  {
+    "id": "Q021",
+    "difficulty": "medium",
+    "question_type": "comparison",
+    "question": "How does retrieval for a standard RAG application differ from retrieval for a research agent?",
+    "expected_answer": "Standard RAG recommends Top-K = 5. Research agents may retrieve up to 10 candidate chunks and rerank them before generating the final answer.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "15_platform_faq.txt::s16",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Standard RAG is preferred for straightforward retrieval."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s5",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Standard RAG applications retrieve context and ask an LLM to generate a grounded answer."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s7",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "For standard RAG, the recommended retrieval setting is Top-K = 5."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s2",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: What Top-K should standard RAG normally use?"
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s2",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "The default recommendation for standard RAG retrieval is Top-K = 5."
+      }
+    ],
+    "expected_sources": [
+      "02_rag_architecture_guide.txt",
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "02_rag_architecture_guide.txt"
+    ],
+    "source_recall": 0.5,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide any information related to the expected answer.",
+    "gen_usage": {
+      "input_tokens": 190,
+      "output_tokens": 8,
+      "cost_usd": 3.3299999999999996e-05,
+      "latency_s": 2.548
+    },
+    "judge_usage": {
+      "input_tokens": 157,
+      "output_tokens": 23,
+      "cost_usd": 0.000747
+    }
+  },
+  {
+    "id": "Q022",
+    "difficulty": "medium",
+    "question_type": "policy_application",
+    "question": "Which controls are required before a Critical Production AI launch beyond the Standard Production requirements?",
+    "expected_answer": "Formal threat modelling, security sign-off, real-time operational monitoring, emergency stop or safe-disable testing, failure-mode exercises, and a named operational owner.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s8",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "High-impact and Critical Production AI systems require security review, threat modelling, and operational monitoring bef"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s0",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "ACMECLOUD PRODUCTION DEPLOYMENT CHECKLIST\nVersion: 1.5\nStatus: Active\n\nBefore Standard Production launch:\n- Use Enterpri"
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s1",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "New Standard Production and Critical Production applications must use OAuth workload identity through the Enterprise AI "
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s6",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting p"
+      }
+    ],
+    "expected_sources": [
+      "08_production_deployment_checklist.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "sources_hit": [
+      "08_production_deployment_checklist.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Before a Critical Production launch, the additional control required beyond the Standard Production requirements is to complete formal threat modelling.",
+    "judge_score": 1,
+    "judge_reason": "The RAG answer only mentions formal threat modelling, missing other required controls like security sign-off and real-time monitoring.",
+    "gen_usage": {
+      "input_tokens": 254,
+      "output_tokens": 22,
+      "cost_usd": 5.13e-05,
+      "latency_s": 3.001
+    },
+    "judge_usage": {
+      "input_tokens": 170,
+      "output_tokens": 31,
+      "cost_usd": 0.000882
+    }
+  },
+  {
+    "id": "Q023",
+    "difficulty": "medium",
+    "question_type": "semantic",
+    "question": "Why should teams not always select the cheapest model?",
+    "expected_answer": "Because the selected model must also meet security-classification, quality, and latency requirements.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s1",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "Teams should not choose a cheaper model if it fails security-classification or answer-quality requirements."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s8",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "Teams should choose the least expensive model that still meets quality, security, and latency requirements."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s7",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "- Cost-aware model selection."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s3",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Top-K = 5, although teams should tune using evaluation results."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s7",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "For high-complexity reasoning over Restricted data, Model-X is preferred."
+      }
+    ],
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "retrieved_docs": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt",
+      "14_product_roadmap.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Teams should not choose a cheaper model if it fails security-classification or answer-quality requirements.",
+    "judge_score": 2,
+    "judge_reason": "The RAG answer addresses security-classification and quality but omits latency requirements.",
+    "gen_usage": {
+      "input_tokens": 189,
+      "output_tokens": 18,
+      "cost_usd": 3.9149999999999996e-05,
+      "latency_s": 2.38
+    },
+    "judge_usage": {
+      "input_tokens": 147,
+      "output_tokens": 24,
+      "cost_usd": 0.000729
+    }
+  },
+  {
+    "id": "Q024",
+    "difficulty": "medium",
+    "question_type": "policy_application",
+    "question": "Can Model-Y process Restricted data?",
+    "expected_answer": "No. Model-Y is not approved for Restricted data.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s6",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Restricted data may only be processed by models on the Approved Enterprise Model List."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s7",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "For high-complexity reasoning over Restricted data, Model-X is preferred."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s4",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "- Model-Y: Public, Internal, Customer Confidential."
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s4",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "Restricted data may be processed only through the Enterprise AI Gateway using an approved enterprise model and with the "
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s3",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "Approved Enterprise Model List:\n- Model-X: Public, Internal, Customer Confidential, Restricted."
+      }
+    ],
+    "expected_sources": [
+      "07_model_selection_guide.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt",
+      "07_model_selection_guide.txt"
+    ],
+    "sources_hit": [
+      "07_model_selection_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide any information about Model-Y's ability to process Restricted data, which is clearly stated in the expected answer.",
+    "gen_usage": {
+      "input_tokens": 197,
+      "output_tokens": 8,
+      "cost_usd": 3.435e-05,
+      "latency_s": 2.342
+    },
+    "judge_usage": {
+      "input_tokens": 128,
+      "output_tokens": 36,
+      "cost_usd": 0.000816
+    }
+  },
+  {
+    "id": "Q025",
+    "difficulty": "medium",
+    "question_type": "temporal",
+    "question": "What is the latest reported monthly query volume in the corpus?",
+    "expected_answer": "2.1 million queries per month at the end of Q2 2026.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s0",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "ACMECLOUD MODEL COST AND PRICING GUIDE\nVersion: 2026-Q2\nStatus: Active\n\nInternal chargeback per 1 million tokens:\n\nModel"
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s9",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Research agents may retrieve up to 10 candidate chunks before reranking."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s0",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "ACMECLOUD PRODUCT ROADMAP\nVersion: H2 2026\nStatus: Planned\n\nQ3 2026 planned:\n- Hybrid retrieval combining vector and key"
+      }
+    ],
+    "expected_sources": [
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "11_cost_pricing_guide.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The latest reported monthly query volume is 2.1 million.",
+    "judge_score": 1,
+    "judge_reason": "The RAG answer provides the correct query volume but lacks the specific time frame mentioned in the expected answer.",
+    "gen_usage": {
+      "input_tokens": 502,
+      "output_tokens": 13,
+      "cost_usd": 8.31e-05,
+      "latency_s": 2.182
+    },
+    "judge_usage": {
+      "input_tokens": 145,
+      "output_tokens": 29,
+      "cost_usd": 0.0007830000000000001
+    }
+  },
+  {
+    "id": "Q026",
+    "difficulty": "medium",
+    "question_type": "trend",
+    "question": "What problems in Q1 motivated the introduction of metadata filtering?",
+    "expected_answer": "Semantically similar policy versions were causing retrieval failures, so metadata filtering for policy status and effective date was introduced.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s1",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "- Metadata filtering was introduced for policy status and effective date."
+      },
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s11",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "Hybrid retrieval or metadata filtering may be needed."
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s5",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "- Add metadata filtering for versioned policies."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s1",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "- Metadata-aware retrieval templates."
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "02_rag_architecture_guide.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the question or provide any relevant information.",
+    "gen_usage": {
+      "input_tokens": 261,
+      "output_tokens": 8,
+      "cost_usd": 4.395e-05,
+      "latency_s": 2.34
+    },
+    "judge_usage": {
+      "input_tokens": 144,
+      "output_tokens": 23,
+      "cost_usd": 0.000708
+    }
+  },
+  {
+    "id": "Q027",
+    "difficulty": "medium",
+    "question_type": "roadmap_awareness",
+    "question": "Is the agentic retrieval planner already an active platform capability according to this corpus?",
+    "expected_answer": "No. It is listed as a planned Q4 2026 capability and must not be described as already available.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "14_product_roadmap.txt::s5",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "Q4 2026 planned:\n- Agentic retrieval planner for multi-hop questions."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s10",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "The agentic retrieval planner is intended for questions where one retrieval pass is unlikely to collect all required evi"
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s0",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "ACMECLOUD ENTERPRISE AI PLATFORM \u2014 OVERVIEW\nVersion: 1.0\nStatus: Active\n\nAcmeCloud is an internal platform for Retrieval"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s5",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "Planned actions:\n- Pilot agentic retrieval for questions requiring multiple evidence sources."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s0",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "ACMECLOUD AGENTIC AI ARCHITECTURE GUIDE\nVersion: 1.3\nStatus: Active\n\nAgentic applications may plan, select tools, retrie"
+      }
+    ],
+    "expected_sources": [
+      "14_product_roadmap.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "03_agentic_ai_architecture_guide.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "14_product_roadmap.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the question about the agentic retrieval planner's status.",
+    "gen_usage": {
+      "input_tokens": 267,
+      "output_tokens": 8,
+      "cost_usd": 4.485e-05,
+      "latency_s": 2.184
+    },
+    "judge_usage": {
+      "input_tokens": 149,
+      "output_tokens": 26,
+      "cost_usd": 0.000759
+    }
+  },
+  {
+    "id": "Q028",
+    "difficulty": "medium",
+    "question_type": "scenario",
+    "question": "A new Critical Production agent will process Restricted customer data. Name three categories of controls that must be satisfied before launch.",
+    "expected_answer": "It must satisfy Critical Production deployment controls, Restricted-data privacy requirements including Gateway and approved model, and agent-specific controls such as documented tool permissions and human-approval points.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s6",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting p"
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s8",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "High-impact and Critical Production AI systems require security review, threat modelling, and operational monitoring bef"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s15",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Agentic applications must document tool permissions and human-approval points before production launch."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s9",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Critical Production agents require real-time monitoring and an emergency stop mechanism."
+      }
+    ],
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt",
+      "06_data_privacy_policy.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "sources_hit": [
+      "03_agentic_ai_architecture_guide.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "source_recall": 0.6666666666666666,
+    "generated_answer": "1. Complete formal threat modelling.\n2. Security review.\n3. Operational monitoring.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not mention any of the specific categories of controls required, such as Critical Production deployment controls, Restricted-data privacy requirements, or agent-specific controls.",
+    "gen_usage": {
+      "input_tokens": 239,
+      "output_tokens": 17,
+      "cost_usd": 4.6049999999999994e-05,
+      "latency_s": 2.889
+    },
+    "judge_usage": {
+      "input_tokens": 176,
+      "output_tokens": 41,
+      "cost_usd": 0.00102
+    }
+  },
+  {
+    "id": "Q029",
+    "difficulty": "hard",
+    "question_type": "multi_hop",
+    "question": "Which model should be selected for high-complexity reasoning over Restricted data, and what is its input-token chargeback rate?",
+    "expected_answer": "Model-X should be selected because it is preferred for high-complexity reasoning and approved for Restricted data. Its input-token chargeback rate is $4.00 per 1 million tokens.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "07_model_selection_guide.txt::s7",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "For high-complexity reasoning over Restricted data, Model-X is preferred."
+      },
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s0",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "ACMECLOUD MODEL COST AND PRICING GUIDE\nVersion: 2026-Q2\nStatus: Active\n\nInternal chargeback per 1 million tokens:\n\nModel"
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s7",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "- Cost-aware model selection."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s0",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "ACMECLOUD MODEL SELECTION GUIDE\nVersion: 2.2\nStatus: Active\n\nModel-X is recommended for high-complexity reasoning, multi"
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s6",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Restricted data may only be processed by models on the Approved Enterprise Model List."
+      }
+    ],
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "Model-X should be selected for high-complexity reasoning over Restricted data, and its input-token chargeback rate is $4.00 per 1 million tokens.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer fully matches the expected answer in both content and detail.",
+    "gen_usage": {
+      "input_tokens": 332,
+      "output_tokens": 33,
+      "cost_usd": 6.96e-05,
+      "latency_s": 2.856
+    },
+    "judge_usage": {
+      "input_tokens": 198,
+      "output_tokens": 23,
+      "cost_usd": 0.00087
+    }
+  },
+  {
+    "id": "Q030",
+    "difficulty": "hard",
+    "question_type": "multi_hop",
+    "question": "A team wants the cheapest model for Restricted-data classification. Which listed model is cheapest among the models approved for Restricted data?",
+    "expected_answer": "Model-Z is cheaper than Model-X among the Restricted-data-approved models. Model-Z costs $2.00 per 1 million input tokens, while Model-X costs $4.00. Model-Y is cheaper overall but is not approved for Restricted data.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s6",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Restricted data may only be processed by models on the Approved Enterprise Model List."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s8",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "Teams should choose the least expensive model that still meets quality, security, and latency requirements."
+      },
+      {
+        "chunk_id": "07_model_selection_guide.txt::s7",
+        "doc_id": "07_model_selection_guide.txt",
+        "preview": "For high-complexity reasoning over Restricted data, Model-X is preferred."
+      },
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s1",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "Teams should not choose a cheaper model if it fails security-classification or answer-quality requirements."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s7",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "- Cost-aware model selection."
+      }
+    ],
+    "expected_sources": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "07_model_selection_guide.txt",
+      "11_cost_pricing_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide any information about the models or their costs.",
+    "gen_usage": {
+      "input_tokens": 204,
+      "output_tokens": 8,
+      "cost_usd": 3.54e-05,
+      "latency_s": 2.23
+    },
+    "judge_usage": {
+      "input_tokens": 184,
+      "output_tokens": 24,
+      "cost_usd": 0.00084
+    }
+  },
+  {
+    "id": "Q031",
+    "difficulty": "hard",
+    "question_type": "version_conflict",
+    "question": "An application launched in 2025 still uses an API key. Does that prove a new application launched in 2026 may also use API-key authentication? Explain.",
+    "expected_answer": "No. The old policy allowed API keys, but it is superseded. The active 2026 policy requires OAuth workload identity for new production workloads. Only pre-2026 applications may temporarily keep API keys under an approved migration exception.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s2",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Existing production applications created before 2026-01-15 may temporarily continue using API keys only under an approve"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s7",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Older production applications may use API keys only with an approved temporary migration exception."
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s1",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "- Several teams continued using legacy API-key authentication."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s4",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: Can I use API keys?"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s5",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Development may use short-lived API keys under the active Security Policy."
+      }
+    ],
+    "expected_sources": [
+      "04_ai_security_policy_v1.txt",
+      "05_ai_security_policy_v2.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "12_q1_platform_review.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "source_recall": 0.5,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the question or provide any relevant information about API key policies.",
+    "gen_usage": {
+      "input_tokens": 210,
+      "output_tokens": 8,
+      "cost_usd": 3.63e-05,
+      "latency_s": 2.244
+    },
+    "judge_usage": {
+      "input_tokens": 190,
+      "output_tokens": 27,
+      "cost_usd": 0.000894
+    }
+  },
+  {
+    "id": "Q032",
+    "difficulty": "hard",
+    "question_type": "multi_document_synthesis",
+    "question": "Design the minimum governance and security controls for a Critical Production agent that can modify production systems and process Restricted data.",
+    "expected_answer": "It should use OAuth workload identity and the Enterprise AI Gateway; use an approved model with required Data Privacy controls; enforce least-privilege tool permissions and explicit allow-lists; require human approval for destructive actions; complete threat modelling and security sign-off; enable real-time monitoring, audit logs, emergency stop controls, and incident-response procedures; and document tool permissions and operational ownership.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s6",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting p"
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s3",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Production agents must not receive unrestricted database, shell, cloud-admin, or secrets-manager access."
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s8",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "High-impact and Critical Production AI systems require security review, threat modelling, and operational monitoring bef"
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s9",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Critical Production agents require real-time monitoring and an emergency stop mechanism."
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s8",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Before Critical Production launch, all Standard requirements apply, plus:\n- Complete formal threat modelling."
+      }
+    ],
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt",
+      "08_production_deployment_checklist.txt",
+      "09_incident_response_runbook.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "sources_hit": [
+      "03_agentic_ai_architecture_guide.txt",
+      "05_ai_security_policy_v2.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "source_recall": 0.6,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not provide any relevant information or details related to the expected governance and security controls.",
+    "gen_usage": {
+      "input_tokens": 241,
+      "output_tokens": 8,
+      "cost_usd": 4.095e-05,
+      "latency_s": 2.261
+    },
+    "judge_usage": {
+      "input_tokens": 207,
+      "output_tokens": 29,
+      "cost_usd": 0.000969
+    }
+  },
+  {
+    "id": "Q033",
+    "difficulty": "hard",
+    "question_type": "numeric_reasoning",
+    "question": "By how much did monthly query volume grow from Q1 to Q2 2026, both in absolute terms and approximately as a percentage?",
+    "expected_answer": "It grew from 1.2 million to 2.1 million, an increase of 0.9 million queries, approximately 75%.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s0",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "ACMECLOUD MODEL COST AND PRICING GUIDE\nVersion: 2026-Q2\nStatus: Active\n\nInternal chargeback per 1 million tokens:\n\nModel"
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s0",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "ACMECLOUD PRODUCT ROADMAP\nVersion: H2 2026\nStatus: Planned\n\nQ3 2026 planned:\n- Hybrid retrieval combining vector and key"
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s5",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "Q4 2026 planned:\n- Agentic retrieval planner for multi-hop questions."
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "11_cost_pricing_guide.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The monthly query volume grew from 1.2 million in Q1 2026 to 2.1 million in Q2 2026. \n\nIn absolute terms, the growth is:\n2.1 million - 1.2 million = 0.9 million.\n\nAs a percentage, the growth is approximately:\n(0.9 million / 1.2 million) * 100 = 75%.\n\nSo, the monthly query volume grew by 0.9 million and approximately 75%.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly provides both the absolute increase and the percentage growth, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 522,
+      "output_tokens": 102,
+      "cost_usd": 0.00013949999999999998,
+      "latency_s": 2.805
+    },
+    "judge_usage": {
+      "input_tokens": 261,
+      "output_tokens": 31,
+      "cost_usd": 0.001155
+    }
+  },
+  {
+    "id": "Q034",
+    "difficulty": "hard",
+    "question_type": "numeric_reasoning",
+    "question": "Which improved more proportionally from Q1 to Q2 2026: average retrieval latency or the RAG answer-quality benchmark?",
+    "expected_answer": "Average retrieval latency improved more proportionally: it fell from 920 ms to 610 ms, about a 33.7% reduction. Answer quality improved from 78% to 86%, about a 10.3% relative increase.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "02_rag_architecture_guide.txt::s7",
+        "doc_id": "02_rag_architecture_guide.txt",
+        "preview": "Retrieval quality should be measured separately from answer quality."
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s5",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "Q4 2026 planned:\n- Agentic retrieval planner for multi-hop questions."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s7",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "For standard RAG, the recommended retrieval setting is Top-K = 5."
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "02_rag_architecture_guide.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The RAG answer-quality benchmark improved from 78% in Q1 to 86% in Q2, which is an increase of 8 percentage points. The average retrieval latency improved from 920 ms in Q1 to 610 ms in Q2, which is a decrease of 310 ms. \n\nTo compare the proportional improvements:\n- RAG answer-quality benchmark improvement: (86 - 78) / 78 = 0.1026 or 10.26%\n- Average retrieval latency improvement: (920 - 610) / 920 = 0.3369 or 33.69%\n\nThus, average retrieval latency improved more proportionally from Q1 to Q2 2026.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly calculates and compares the proportional improvements, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 388,
+      "output_tokens": 143,
+      "cost_usd": 0.000144,
+      "latency_s": 3.223
+    },
+    "judge_usage": {
+      "input_tokens": 320,
+      "output_tokens": 25,
+      "cost_usd": 0.00126
+    }
+  },
+  {
+    "id": "Q035",
+    "difficulty": "hard",
+    "question_type": "scenario_multi_hop",
+    "question": "A Critical Production workload reports 99.92% availability and 700 ms p95 retrieval latency. Which SLOs are met and which are missed?",
+    "expected_answer": "It meets the Critical Production latency SLO because 700 ms is below 800 ms, but misses the availability target because 99.92% is below 99.95%.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s1",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "A Critical Production workload with 99.92% monthly availability does not meet the 99.95% target even if its latency targ"
+      },
+      {
+        "chunk_id": "10_platform_sla_slo.txt::s0",
+        "doc_id": "10_platform_sla_slo.txt",
+        "preview": "ACMECLOUD PLATFORM SLA AND SLO\nVersion: 2.0\nEffective Date: 2026-04-01\nStatus: Active\n\nDevelopment:\n- Availability: 99.0"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s4",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "The platform met the Standard Production availability target of 99.9% but did not meet the Critical Production target of"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s5",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "- Partial retrieval degradation affecting production."
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s2",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "Workload classes are Development, Standard Production, and Critical Production."
+      }
+    ],
+    "expected_sources": [
+      "10_platform_sla_slo.txt"
+    ],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "09_incident_response_runbook.txt",
+      "10_platform_sla_slo.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "10_platform_sla_slo.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The Critical Production workload meets the retrieval latency SLO of p95 below 800 milliseconds, but it misses the availability SLO of 99.95% since it reports 99.92%.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly identifies that the latency SLO is met and the availability SLO is missed, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 354,
+      "output_tokens": 39,
+      "cost_usd": 7.649999999999999e-05,
+      "latency_s": 2.469
+    },
+    "judge_usage": {
+      "input_tokens": 208,
+      "output_tokens": 34,
+      "cost_usd": 0.001032
+    }
+  },
+  {
+    "id": "Q036",
+    "difficulty": "hard",
+    "question_type": "scenario_multi_hop",
+    "question": "An agent accidentally exposes Restricted data and also causes model latency above 5 seconds. What incident severity should be used and what should the first response action be?",
+    "expected_answer": "Severity 1 should be used because Restricted-data exposure qualifies as Severity 1 and takes precedence over the latency-related Severity 2 condition. The first response action is to stop or isolate the affected AI workflow.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s0",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "ACMECLOUD AI INCIDENT RESPONSE RUNBOOK\nVersion: 2.0\nStatus: Active\n\nSeverity 1 includes:\n- Exposure of Customer Confiden"
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s19",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "A service can remain technically available and still have a Severity 1 incident if an AI agent performs an unauthorized "
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s4",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "Severity 2 includes:\n- Model latency above 5 seconds for more than 15 consecutive minutes."
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s3",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "- One Severity 2 incident involved partial retrieval degradation."
+      },
+      {
+        "chunk_id": "09_incident_response_runbook.txt::s7",
+        "doc_id": "09_incident_response_runbook.txt",
+        "preview": "Severity 1 response:\n1."
+      }
+    ],
+    "expected_sources": [
+      "09_incident_response_runbook.txt"
+    ],
+    "retrieved_docs": [
+      "09_incident_response_runbook.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [
+      "09_incident_response_runbook.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The incident severity should be classified as Severity 1 due to the exposure of Restricted data. The first response action is not provided in the context.",
+    "judge_score": 1,
+    "judge_reason": "The RAG answer correctly identifies the incident severity as Severity 1 but fails to provide the first response action.",
+    "gen_usage": {
+      "input_tokens": 238,
+      "output_tokens": 29,
+      "cost_usd": 5.31e-05,
+      "latency_s": 2.555
+    },
+    "judge_usage": {
+      "input_tokens": 203,
+      "output_tokens": 30,
+      "cost_usd": 0.000969
+    }
+  },
+  {
+    "id": "Q037",
+    "difficulty": "hard",
+    "question_type": "architecture_reasoning",
+    "question": "Why is the Q4 2026 agentic retrieval planner a logical response to the platform's earlier evaluation problems?",
+    "expected_answer": "Q1 showed poor performance on hard multi-document questions, and Q2 reported improvement from reranking while planning a pilot for agentic retrieval. The Q4 planner targets questions where one retrieval pass is unlikely to gather all required evidence, directly addressing those multi-document and multi-hop failures.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "14_product_roadmap.txt::s5",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "Q4 2026 planned:\n- Agentic retrieval planner for multi-hop questions."
+      },
+      {
+        "chunk_id": "14_product_roadmap.txt::s10",
+        "doc_id": "14_product_roadmap.txt",
+        "preview": "The agentic retrieval planner is intended for questions where one retrieval pass is unlikely to collect all required evi"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s5",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "Planned actions:\n- Pilot agentic retrieval for questions requiring multiple evidence sources."
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      }
+    ],
+    "expected_sources": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "retrieved_docs": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "sources_hit": [
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt",
+      "14_product_roadmap.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "The Q4 2026 agentic retrieval planner is a logical response to the platform's earlier evaluation problems because it is intended for questions where one retrieval pass is unlikely to collect all required evidence. This addresses the major issues noted in the Q1 platform review, where two incidents were caused by stale indexes, indicating that the existing retrieval methods were insufficient for complex queries requiring multiple evidence sources. The planned pilot for agentic retrieval in Q2 2026 further supports this by focusing on questions that necessitate multiple evidence sources, thereby improving the overall retrieval process and quality.",
+    "judge_score": 2,
+    "judge_reason": "The RAG answer correctly identifies the need for multiple evidence sources and mentions the Q1 issues, but it inaccurately attributes the problems to stale indexes rather than multi-document failures.",
+    "gen_usage": {
+      "input_tokens": 394,
+      "output_tokens": 113,
+      "cost_usd": 0.0001269,
+      "latency_s": 3.018
+    },
+    "judge_usage": {
+      "input_tokens": 294,
+      "output_tokens": 43,
+      "cost_usd": 0.001398
+    }
+  },
+  {
+    "id": "Q038",
+    "difficulty": "hard",
+    "question_type": "policy_exception",
+    "question": "A Development team wants to use a short-lived API key while experimenting with Restricted data. Is that allowed?",
+    "expected_answer": "No. Development may use short-lived API keys only when no Restricted data is processed. Restricted data must use the Enterprise AI Gateway and an approved enterprise model under the active security and privacy policies.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s4",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Development environments may use short-lived API keys for experimentation when no Restricted data is processed."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s5",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "A: Development may use short-lived API keys under the active Security Policy."
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s4",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Q: Can I use API keys?"
+      },
+      {
+        "chunk_id": "15_platform_faq.txt::s7",
+        "doc_id": "15_platform_faq.txt",
+        "preview": "Older production applications may use API keys only with an approved temporary migration exception."
+      },
+      {
+        "chunk_id": "05_ai_security_policy_v2.txt::s2",
+        "doc_id": "05_ai_security_policy_v2.txt",
+        "preview": "Existing production applications created before 2026-01-15 may temporarily continue using API keys only under an approve"
+      }
+    ],
+    "expected_sources": [
+      "05_ai_security_policy_v2.txt",
+      "06_data_privacy_policy.txt"
+    ],
+    "retrieved_docs": [
+      "05_ai_security_policy_v2.txt",
+      "15_platform_faq.txt"
+    ],
+    "sources_hit": [
+      "05_ai_security_policy_v2.txt"
+    ],
+    "source_recall": 0.5,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the question or provide any relevant information.",
+    "gen_usage": {
+      "input_tokens": 206,
+      "output_tokens": 8,
+      "cost_usd": 3.57e-05,
+      "latency_s": 2.295
+    },
+    "judge_usage": {
+      "input_tokens": 169,
+      "output_tokens": 23,
+      "cost_usd": 0.000783
+    }
+  },
+  {
+    "id": "Q039",
+    "difficulty": "hard",
+    "question_type": "cross_document_reasoning",
+    "question": "A Standard Production agent wants to delete production records automatically without human approval. Is this compliant if the tool is on its allow-list?",
+    "expected_answer": "No. An allow-listed tool is not sufficient. Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting production data.",
+    "answerable": true,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s6",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting p"
+      },
+      {
+        "chunk_id": "08_production_deployment_checklist.txt::s15",
+        "doc_id": "08_production_deployment_checklist.txt",
+        "preview": "Agentic applications must document tool permissions and human-approval points before production launch."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s2",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Every agent must have an explicit tool allow-list and least-privilege permissions."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s9",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Critical Production agents require real-time monitoring and an emergency stop mechanism."
+      },
+      {
+        "chunk_id": "03_agentic_ai_architecture_guide.txt::s3",
+        "doc_id": "03_agentic_ai_architecture_guide.txt",
+        "preview": "Production agents must not receive unrestricted database, shell, cloud-admin, or secrets-manager access."
+      }
+    ],
+    "expected_sources": [
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "retrieved_docs": [
+      "03_agentic_ai_architecture_guide.txt",
+      "08_production_deployment_checklist.txt"
+    ],
+    "sources_hit": [
+      "03_agentic_ai_architecture_guide.txt"
+    ],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 0,
+    "judge_reason": "The RAG answer does not address the compliance requirement for human approval in deleting production records.",
+    "gen_usage": {
+      "input_tokens": 241,
+      "output_tokens": 8,
+      "cost_usd": 4.095e-05,
+      "latency_s": 2.112
+    },
+    "judge_usage": {
+      "input_tokens": 165,
+      "output_tokens": 26,
+      "cost_usd": 0.000807
+    }
+  },
+  {
+    "id": "Q040",
+    "difficulty": "hard",
+    "question_type": "unanswerable",
+    "question": "What was AcmeCloud's total company revenue in FY2025?",
+    "expected_answer": "The corpus does not provide AcmeCloud company revenue for FY2025, so the question cannot be answered from the available documents.",
+    "answerable": false,
+    "retrieved_chunks": [
+      {
+        "chunk_id": "13_q2_platform_review.txt::s0",
+        "doc_id": "13_q2_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q2 2026\nReporting Period: April\u2013June 2026\nStatus: Latest\n\nQ2 metrics:\n- Monthly query volume"
+      },
+      {
+        "chunk_id": "12_q1_platform_review.txt::s0",
+        "doc_id": "12_q1_platform_review.txt",
+        "preview": "ACMECLOUD PLATFORM REVIEW \u2014 Q1 2026\nReporting Period: January\u2013March 2026\nStatus: Historical\n\nQ1 metrics:\n- Monthly query"
+      },
+      {
+        "chunk_id": "01_platform_overview.txt::s0",
+        "doc_id": "01_platform_overview.txt",
+        "preview": "ACMECLOUD ENTERPRISE AI PLATFORM \u2014 OVERVIEW\nVersion: 1.0\nStatus: Active\n\nAcmeCloud is an internal platform for Retrieval"
+      },
+      {
+        "chunk_id": "11_cost_pricing_guide.txt::s0",
+        "doc_id": "11_cost_pricing_guide.txt",
+        "preview": "ACMECLOUD MODEL COST AND PRICING GUIDE\nVersion: 2026-Q2\nStatus: Active\n\nInternal chargeback per 1 million tokens:\n\nModel"
+      },
+      {
+        "chunk_id": "06_data_privacy_policy.txt::s0",
+        "doc_id": "06_data_privacy_policy.txt",
+        "preview": "ACMECLOUD DATA PRIVACY POLICY\nVersion: 3.0\nStatus: Active\n\nData is classified as Public, Internal, Customer Confidential"
+      }
+    ],
+    "expected_sources": [],
+    "retrieved_docs": [
+      "01_platform_overview.txt",
+      "06_data_privacy_policy.txt",
+      "11_cost_pricing_guide.txt",
+      "12_q1_platform_review.txt",
+      "13_q2_platform_review.txt"
+    ],
+    "sources_hit": [],
+    "source_recall": 1.0,
+    "generated_answer": "I cannot answer from the provided context.",
+    "judge_score": 3,
+    "judge_reason": "The RAG answer correctly states that the information is not available in the provided context, matching the expected answer.",
+    "gen_usage": {
+      "input_tokens": 533,
+      "output_tokens": 8,
+      "cost_usd": 8.474999999999999e-05,
+      "latency_s": 2.296
+    },
+    "judge_usage": {
+      "input_tokens": 150,
+      "output_tokens": 30,
+      "cost_usd": 0.00081
+    }
+  }
+]

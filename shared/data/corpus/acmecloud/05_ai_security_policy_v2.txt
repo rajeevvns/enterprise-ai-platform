@@ -1,0 +1,16 @@
+ACMECLOUD AI SECURITY POLICY
+Version: 2.0
+Effective Date: 2026-01-15
+Status: Active
+
+API-key authentication is deprecated for new production workloads. New Standard Production and Critical Production applications must use OAuth workload identity through the Enterprise AI Gateway.
+
+Existing production applications created before 2026-01-15 may temporarily continue using API keys only under an approved migration exception. Such exceptions expire on 2026-12-31.
+
+Development environments may use short-lived API keys for experimentation when no Restricted data is processed.
+
+Customer Confidential and Restricted data must pass through the Enterprise AI Gateway. Restricted data may only be processed by models on the Approved Enterprise Model List.
+
+Production applications must retain model and tool audit logs for at least 180 days.
+
+High-impact and Critical Production AI systems require security review, threat modelling, and operational monitoring before launch. Least privilege is mandatory.

@@ -1,0 +1,24 @@
+ACMECLOUD AI INCIDENT RESPONSE RUNBOOK
+Version: 2.0
+Status: Active
+
+Severity 1 includes:
+- Exposure of Customer Confidential or Restricted data.
+- Unauthorized destructive action by an AI agent.
+- Complete Enterprise AI Gateway outage affecting production.
+- AI action creating material legal, financial, or safety impact.
+
+Severity 2 includes:
+- Model latency above 5 seconds for more than 15 consecutive minutes.
+- Partial retrieval degradation affecting production.
+- Repeated incorrect answers with no sensitive-data exposure or destructive action.
+
+Severity 1 response:
+1. Stop or isolate the affected AI workflow.
+2. Preserve audit logs and evidence.
+3. Notify the security incident commander and application owner.
+4. Revoke or restrict compromised tool credentials if applicable.
+5. Assess affected data and downstream actions.
+6. Recover only after containment is confirmed.
+
+A service can remain technically available and still have a Severity 1 incident if an AI agent performs an unauthorized destructive action.

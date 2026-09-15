@@ -1,0 +1,15 @@
+ACMECLOUD MODEL COST AND PRICING GUIDE
+Version: 2026-Q2
+Status: Active
+
+Internal chargeback per 1 million tokens:
+
+Model-X: Input $4.00, Output $12.00
+Model-Y: Input $0.50, Output $1.50
+Model-Z: Input $2.00, Output $6.00
+Embedding-Small: $0.02 per 1 million tokens
+Embedding-Large: $0.13 per 1 million tokens
+
+There is no separate vector-search charge for the first 10 million searches per month.
+
+Teams should not choose a cheaper model if it fails security-classification or answer-quality requirements.

@@ -1,0 +1,14 @@
+ACMECLOUD AI SECURITY POLICY
+Version: 1.0
+Effective Date: 2025-01-15
+Status: Superseded
+
+Production AI applications may authenticate using API keys if the keys are stored in the approved enterprise secrets manager and rotated every 90 days.
+
+Customer Confidential and Restricted data may only be sent through the Enterprise AI Gateway. External public AI services must not receive such data.
+
+Production applications must maintain audit logs for model requests and responses for at least 90 days.
+
+AI systems should use least-privilege access. High-impact applications require security review before launch.
+
+This policy was replaced by AI Security Policy version 2.0.

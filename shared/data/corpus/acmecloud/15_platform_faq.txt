@@ -1,0 +1,21 @@
+ACMECLOUD ENTERPRISE AI PLATFORM — FAQ
+Version: 1.8
+Status: Active
+
+Q: What happens if Top-K is not specified?
+A: The search API returns 3 results.
+
+Q: What Top-K should standard RAG normally use?
+A: Top-K = 5, although teams should tune using evaluation results.
+
+Q: Can I use API keys?
+A: Development may use short-lived API keys under the active Security Policy. New production workloads must use OAuth. Older production applications may use API keys only with an approved temporary migration exception.
+
+Q: Can I send customer data to a public external LLM?
+A: No. Customer Confidential and Restricted data must use the Enterprise AI Gateway.
+
+Q: Can PII ever be processed by an LLM?
+A: Yes, but only when all Data Privacy Policy conditions are satisfied.
+
+Q: Should every difficult question use an AI agent?
+A: No. Agents should be used when a task genuinely requires planning, multiple retrieval steps, tool use, or actions. Standard RAG is preferred for straightforward retrieval.

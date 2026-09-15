@@ -1,0 +1,17 @@
+ACMECLOUD RAG ARCHITECTURE GUIDE
+Version: 2.1
+Status: Active
+
+A standard RAG flow has six stages: document ingestion, chunking, embedding, indexing, retrieval, and grounded generation.
+
+The recommended baseline for general enterprise text is 800-character chunks with 150-character overlap. The default recommendation for standard RAG retrieval is Top-K = 5.
+
+Applications should preserve metadata including source document, document type, publication date, version, and status. When multiple versions of the same policy exist, retrieval should prefer Active documents with the most recent effective date.
+
+RAG prompts must instruct the model to answer only from retrieved context. If evidence is insufficient, the model should say the corpus does not contain enough information.
+
+Retrieval quality should be measured separately from answer quality. Recommended retrieval metrics include Hit Rate@K and Recall@K. Answer quality may be evaluated with a golden set and an LLM-as-a-Judge.
+
+Semantic similarity alone may be weak for identifiers, model names, exact dates, and numeric thresholds. Hybrid retrieval or metadata filtering may be needed.
+
+Questions requiring facts from several documents should retrieve multiple relevant sources rather than assume one chunk contains the complete answer.

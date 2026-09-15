@@ -1,0 +1,15 @@
+ACMECLOUD AGENTIC AI ARCHITECTURE GUIDE
+Version: 1.3
+Status: Active
+
+Agentic applications may plan, select tools, retrieve from multiple sources, and take approved actions. This creates risks beyond standard RAG because an agent can affect external systems.
+
+Every agent must have an explicit tool allow-list and least-privilege permissions. Production agents must not receive unrestricted database, shell, cloud-admin, or secrets-manager access.
+
+Research agents may retrieve up to 10 candidate chunks and should rerank evidence before final answer generation. Transactional agents must separate planning from execution.
+
+Human approval is mandatory for destructive actions in Standard Production and Critical Production, including deleting production data, changing access control, modifying financial records, or disabling security controls.
+
+Agents using Restricted data must use an approved enterprise model and the Enterprise AI Gateway.
+
+Agent runs must record the request, tools selected, actions attempted, policy decisions, and final result. Critical Production agents require real-time monitoring and an emergency stop mechanism.

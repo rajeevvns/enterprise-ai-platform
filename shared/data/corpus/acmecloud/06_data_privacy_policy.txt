@@ -1,0 +1,15 @@
+ACMECLOUD DATA PRIVACY POLICY
+Version: 3.0
+Status: Active
+
+Data is classified as Public, Internal, Customer Confidential, or Restricted.
+
+Public and Internal data may be processed by approved enterprise AI services. Customer Confidential data must be processed through the Enterprise AI Gateway. Direct transmission to public external LLM services is prohibited.
+
+Restricted data may be processed only through the Enterprise AI Gateway using an approved enterprise model and with the Data Protection Profile enabled.
+
+Personally Identifiable Information (PII) is treated as Customer Confidential unless another classification requires stronger protection.
+
+PII may be processed by an LLM only when all are true: the Enterprise AI Gateway is used, the Data Protection Profile is enabled, the model is approved, and the business use case has an approved privacy assessment.
+
+Logs containing Customer Confidential or Restricted data must follow the retention period approved by the privacy assessment.
