@@ -17,6 +17,7 @@ logs/
 *.db
 results.json
 *.log
+*.zip
 
 # OS
 .DS_Store

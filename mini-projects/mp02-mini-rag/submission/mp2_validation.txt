@@ -1,0 +1,87 @@
+====================================================================
+ SOURCE-MATCH VALIDATION  (python mp2_rag.py validate)
+====================================================================
+
+  Validating 2 questions from predefined_questions.jsonl…
+
+  ✓ q1_red_headed_league_assistant
+      Q: Who was the assistant working at Jabez Wilson's pawnshop, and what was his real identity?
+      Cited: 01_red_headed_league.txt
+      Expected: 01_red_headed_league.txt
+      Facts matched: 1/5
+      Latency: 4208ms
+
+  ✓ q2_speckled_band_murder_weapon
+      Q: What killed Julia Stoner at Stoke Moran, and how was the method discovered?
+      Cited: 02_speckled_band.txt
+      Expected: 02_speckled_band.txt
+      Facts matched: 3/6
+      Latency: 2570ms
+
+  Source-match: 2/2
+
+  Validating 3 questions from learner_questions.jsonl…
+
+  ✓ q3_scandal_the_woman
+      Q: Who is 'the woman' that Sherlock Holmes always refers to?
+      Cited: 05_scandal_in_bohemia.txt
+      Expected: 05_scandal_in_bohemia.txt
+      Facts matched: 1/1
+      Latency: 2196ms
+
+  ✓ q4_blue_carbuncle_wrong_goose
+      Q: How did the blue carbuncle end up in the wrong goose, and whose goose was it originally meant to be?
+      Cited: 03_blue_carbuncle.txt
+      Expected: 03_blue_carbuncle.txt
+      Facts matched: 1/4
+      Latency: 2711ms
+
+  ✓ q5_engineers_thumb_coining_operation
+      Q: What was the hydraulic press at Eyford actually being used for, and how did the 'fuller's earth' story cover it up?
+      Cited: 04_engineers_thumb.txt
+      Expected: 04_engineers_thumb.txt
+      Facts matched: 4/4
+      Latency: 2139ms
+
+  Source-match: 3/3
+
+
+====================================================================
+ FULL Q&A TRANSCRIPT (question, answer, citations, latency)
+====================================================================
+
+### q1_red_headed_league_assistant
+Q: Who was the assistant working at Jabez Wilson's pawnshop, and what was his real identity?
+A: The assistant working at Jabez Wilson's pawnshop was Vincent Spaulding. His real identity is not explicitly stated in the excerpts provided. However, it is clear that he was a small, quick, and clever individual who had a fondness for photography and managed the pawnshop during Wilson's absence. He was with Wilson for about a month before the Red-Headed League advertisement appeared.
+Sources: The Red-Headed League — Introduction, The Red-Headed League — Holmes Investigates, The Red-Headed League — The Strange Work
+Latency: 3886ms
+
+### q2_speckled_band_murder_weapon
+Q: What killed Julia Stoner at Stoke Moran, and how was the method discovered?
+A: Julia Stoner was killed by a snake, specifically a "speckled band," which was released by her stepfather, Doctor Roylott, through a ventilator. The method was discovered by Sherlock Holmes during his investigation, where he noted peculiarities in Julia's room, including a bell-rope that led to a ventilator opening into Doctor Roylott's bedroom, not to the outside. Additionally, the circumstances of Julia's death, as described by her sister Helen, indicated that she had been agitated prior to her death and had screamed about "the band" just before collapsing.
+Sources: The Adventure of the Speckled Band — The Death of Julia Stoner, The Adventure of the Speckled Band — The Death of Julia Stoner, The Adventure of the Speckled Band — Holmes Investigates
+Latency: 2814ms
+
+### q3_scandal_the_woman
+Q: Who is 'the woman' that Sherlock Holmes always refers to?
+A: The woman that Sherlock Holmes always refers to is Irene Adler. She is distinguished by Holmes as "THE woman" and is noted for her cleverness, as he was ultimately outsmarted by her in the case.
+Sources: A Scandal in Bohemia — Introduction, A Scandal in Bohemia — Holmes Disguises Himself, A Scandal in Bohemia — Irene Adler Wins
+Latency: 2305ms
+
+### q4_blue_carbuncle_wrong_goose
+Q: How did the blue carbuncle end up in the wrong goose, and whose goose was it originally meant to be?
+A: The blue carbuncle ended up in the wrong goose because it was originally meant for Mrs. Henry Baker, as indicated by the card attached to the goose's leg and the initials "H. B." in the hatband. The goose itself was purchased from a lot delivered by Mrs. Oakshott of Brixton Road. This suggests that due to a mix-up in distribution, the goose that contained the blue carbuncle was not returned to its rightful owner.
+Sources: The Adventure of the Blue Carbuncle — The Carbuncle, The Adventure of the Blue Carbuncle — The Hat and the Goose, The Adventure of the Blue Carbuncle — The Trail of the Goose
+Latency: 2647ms
+
+NOTE on q4: this answer is subtly wrong/incomplete — it never retrieved the "James
+Ryder Confesses" chunk (James Ryder is the actual thief who panicked and hid the
+stone in his sister Mrs Oakshott's goose), so the model reconstructs a plausible-
+sounding but muddled account from the chunks it did get. See mp2_reflection.md
+("What didn't work") for the retrieval-ranking analysis behind this.
+
+### q5_engineers_thumb_coining_operation
+Q: What was the hydraulic press at Eyford actually being used for, and how did the 'fuller's earth' story cover it up?
+A: The hydraulic press at Eyford was actually being used to stamp counterfeit half-crowns from a base alloy of nickel and tin. The "fuller's earth" story was a cover-up invented to explain the press's presence without raising suspicion, masking its true and illegal purpose.
+Sources: The Adventure of the Engineer's Thumb — The Hydraulic Press, The Adventure of the Engineer's Thumb — The Hydraulic Press, The Adventure of the Engineer's Thumb — The Coining Operation
+Latency: 2385ms
