@@ -106,9 +106,9 @@ def score_summary(results: list[dict]) -> dict:
     """
     Compute aggregate judge metrics from a list of result dicts.
 
-    Each result dict must have: judge_score (int), difficulty (str).
+    Each result dict must have: judge_score (int), difficulty (str), question_type (str).
 
-    Returns dict with: avg_score, score_distribution, by_difficulty.
+    Returns dict with: avg_score, score_distribution, by_difficulty, by_question_type.
     """
     scores = [r["judge_score"] for r in results]
     avg    = sum(scores) / len(scores) if scores else 0.0
@@ -117,15 +117,18 @@ def score_summary(results: list[dict]) -> dict:
     for s in scores:
         dist[str(s)] += 1
 
-    by_diff: dict[str, list[int]] = {}
-    for r in results:
-        by_diff.setdefault(r["difficulty"], []).append(r["judge_score"])
+    def _avg_by(key: str) -> dict[str, float]:
+        grouped: dict[str, list[int]] = {}
+        for r in results:
+            grouped.setdefault(r[key], []).append(r["judge_score"])
+        return {
+            k: round(sum(ss) / len(ss), 3)
+            for k, ss in sorted(grouped.items())
+        }
 
     return {
         "avg_score":          round(avg, 3),
         "score_distribution": dist,
-        "by_difficulty": {
-            d: round(sum(ss) / len(ss), 3)
-            for d, ss in sorted(by_diff.items())
-        },
+        "by_difficulty":      _avg_by("difficulty"),
+        "by_question_type":   _avg_by("question_type"),
     }

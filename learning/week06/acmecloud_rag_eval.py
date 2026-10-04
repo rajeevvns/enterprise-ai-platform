@@ -11,7 +11,10 @@ Pipeline:
   2. Embed all chunks     (text-embedding-3-small, single batch)
   3. For each question:   embed query → retrieve top-5 → generate answer
   4. LLM-as-judge:        score each answer 0–3 vs expected
-  5. Print KPI table      + save full results to acmecloud_rag_results.json
+  5. Print KPI table      + save full results to acmecloud_rag_results_<config>.json
+                          (filename is tagged with top_k/strategy/embed model so
+                          different configs never overwrite each other's results —
+                          see TOP_K / CHUNK_STRATEGY / EMBED_MODEL below)
 
 Run (from any directory):
   export OPENAI_API_KEY=<your-key>
@@ -59,14 +62,22 @@ from shared.evaluation.judge import judge_answer, score_summary  # noqa: E402
 
 CORPUS_DIR   = REPO_ROOT / "shared/data/corpus/acmecloud"
 GOLDEN_FILE  = REPO_ROOT / "shared/data/golden_set/acmecloud/golden_set_40_questions.json"
-RESULTS_FILE = pathlib.Path(__file__).parent / "acmecloud_rag_results.json"
 
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://openai.vocareum.com/v1")
 EMBED_MODEL     = "text-embedding-3-small"
 CHAT_MODEL      = "gpt-4o-mini"
 JUDGE_MODEL     = "gpt-4o"
 
-TOP_K = 5
+TOP_K           = 5
+CHUNK_STRATEGY  = "paragraph"   # "paragraph" | "sentence"
+
+# Results filename is tagged with the knobs above, so changing TOP_K,
+# CHUNK_STRATEGY, or EMBED_MODEL and re-running never overwrites a
+# previous run's output — each config gets its own results file.
+_embed_tag   = EMBED_MODEL.replace("text-embedding-", "").replace("-", "")
+RESULTS_FILE = pathlib.Path(__file__).parent / (
+    f"acmecloud_rag_results_k{TOP_K}_{CHUNK_STRATEGY}_{_embed_tag}.json"
+)
 
 # Cost rates
 EMBED_RATE  = 0.02 / 1_000_000          # text-embedding-3-small: $0.02 / 1M tokens
@@ -168,7 +179,7 @@ async def run_eval() -> tuple[list[dict], float]:
     """Run the full evaluation. Returns (results, embed_cost_usd)."""
 
     # 1 — Load & embed corpus
-    all_chunks = load_corpus(CORPUS_DIR, strategy="paragraph")
+    all_chunks = load_corpus(CORPUS_DIR, strategy=CHUNK_STRATEGY)
 
     print(f"Embedding {len(all_chunks)} chunks …")
     t0         = time.perf_counter()
@@ -226,6 +237,12 @@ def print_report(results: list[dict], embed_cost: float) -> None:
     for diff, avg in summary["by_difficulty"].items():
         count = sum(1 for r in results if r["difficulty"] == diff)
         print(f"    {diff:<8s} : {avg:.2f} / 3.00  (n={count})")
+    print()
+
+    print("  Score by question type:")
+    for qtype, avg in summary["by_question_type"].items():
+        count = sum(1 for r in results if r["question_type"] == qtype)
+        print(f"    {qtype:<20s} : {avg:.2f} / 3.00  (n={count})")
     print()
     print("  Score distribution:")
     for score, count in sorted(summary["score_distribution"].items()):
