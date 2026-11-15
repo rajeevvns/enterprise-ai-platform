@@ -1,0 +1,122 @@
+MP3 Week 12 demo - 2 minutes 30 seconds
+Actual captured terminal output replay with computer-generated narration.
+The saved evaluation table is from the nine-question live evaluation.
+
+00:00 - MP3 / Week 12 - Grounded Q&A
+Narration: This is Mini Project Three, the Week Twelve grounded question and answer assistant. It uses five Sherlock Holmes summaries, OpenAI, and Qdrant. Four functions add numbered evidence, citation validation, abstention, and evaluation. This demo replays actual captured terminal output with computer generated narration. No credentials are shown.
+
+A cited document assistant over five Sherlock Holmes summaries.
+
+Pipeline: load -> chunk -> embed -> Qdrant -> retrieve -> answer
+
+Implemented: format_context, validate_citations,
+             should_abstain, evaluate
+
+OpenAI: gpt-4o-mini + text-embedding-3-small
+Retrieval: top 10 chunks | threshold: 0.30
+
+This video replays actual captured terminal output.
+Narration is computer-generated. Credentials are not shown.
+
+00:25 - 1 / Offline logic checks
+Narration: First, the offline self test passes without service credentials. It checks chunk formatting, source numbering, invalid and repeated citation markers, empty retrieval, threshold equality, and evaluation edge cases. These synthetic checks validate implementation logic; they do not by themselves prove that the live assistant is reliable.
+$ env -u OPENAI_API_KEY -u QDRANT_URL -u QDRANT_API_KEY
+  python mp3_grounded_qa.py selftest
+  ✓ load_corpus reads the corpus (5 docs)
+  ✓ chunk_document splits doc 0 into chunks (13)
+  ✓ format_context numbers chunks [1]/[2]
+  ✓ format_context preserves text and separates chunks
+  ✓ format_context maps numbered sources to chunk metadata
+  ✓ format_context handles no chunks
+  ✓ validate_citations accepts real markers
+  ✓ validate_citations flags a fabricated marker
+  ✓ validate_citations handles mixed, repeated, and zero markers
+  ✓ validate_citations handles no numeric citations
+  ✓ validate_citations rejects citations when no sources exist
+  ✓ should_abstain: low score → abstain
+  ✓ should_abstain: good score → answer
+  ✓ should_abstain: no chunks → abstain
+  ✓ should_abstain: score at threshold → answer
+  ✓ should_abstain: highest score wins regardless of order
+  ✓ should_abstain: all scores below threshold → abstain
+  ✓ evaluate: hit rate 1/2 answerable
+  ✓ evaluate: grounded rate 1/2 answerable
+  ✓ evaluate: abstention accuracy 1/1
+  ✓ evaluate: hallucination rate 0/1
+  ✓ format_eval_table renders a table
+  ✓ evaluate: rows preserve question order and outcomes
+  ✓ evaluate: empty question set has zero counts and rates
+  ✓ evaluate: answerable-only set avoids abstention division by zero
+  ✓ evaluate: all abstention labels classify unsupported answers as hallucinations
+  ✓ evaluate: correct retrieval with fabricated citation is not grounded
+  ✓ evaluate: refusing an answerable question is not grounded
+
+✓ selftest passed
+
+
+00:50 - 2 / Cited answer - Julia Stoner
+Narration: The first live question asks what killed Julia Stoner. The assistant answers a swamp adder and cites the explanation passage. With only three retrieved chunks, it previously refused because the cause was missing. The evidence ranked seventh and eighth. Retrieving ten chunks fixed that failure without lowering the threshold.
+$ python mp3_grounded_qa.py ask
+Grounded Q&A over the Sherlock corpus. Empty line to exit.
+
+? What killed Julia Stoner?
+
+Julia Stoner was killed by a snake, specifically a swamp adder, which had bitten her as she lay in bed. The bite left no visible mark due to its tiny puncture and quick action [8].
+
+  Sources:
+    [8] The Adventure of the Speckled Band — The Explanation  (score 0.361)
+  Latency: 4440ms
+
+?
+
+01:15 - 3 / Multi-hop answer - the Red-Headed League
+Narration: The second question needs connected evidence from different sections. Wilson copied the Encyclopaedia Britannica from ten until two. His absence let John Clay tunnel from the pawnshop cellar into the bank vault. The cited answer connects the copying schedule with the criminal plan rather than relying on general knowledge.
+$ python mp3_grounded_qa.py ask
+Grounded Q&A over the Sherlock corpus. Empty line to exit.
+
+? What work kept Jabez Wilson away from his pawnshop, during which hours, and how did his absence help John Clay reach the bank's gold?
+
+Jabez Wilson was kept away from his pawnshop by the work of copying the Encyclopaedia Britannica for the Red-Headed League, which required him to be in the league's office from ten o'clock to two each day. His absence allowed John Clay to tunnel from Wilson's cellar to the vault of the City and Suburban Bank, as Wilson was not present to supervise the shop during those hours [4][3].
+
+  Sources:
+    [3] The Red-Headed League — The Identity of the Assistant  (score 0.55)
+    [4] The Red-Headed League — The Strange Work  (score 0.519)
+  Latency: 4888ms
+
+?
+
+01:40 - 4 / Correct abstention - Professor Moriarty
+Narration: Professor Moriarty is a plausible Holmes question, but he is absent from these five documents. The assistant says it does not know based on the provided documents. Earlier inspection showed this query passed the similarity threshold, so this refusal also demonstrates the model respecting the source only prompt.
+$ python mp3_grounded_qa.py ask
+Grounded Q&A over the Sherlock corpus. Empty line to exit.
+
+? Who is Professor Moriarty?
+
+I don't know based on the provided documents.
+
+  (abstained — no supporting excerpt)
+  Latency: 3284ms
+
+?
+
+02:05 - 5 / Saved evaluation - nine questions
+Narration: The saved evaluation covers six answerable and three unanswerable questions, including the three added questions. Retrieval and grounded citation rates are one, abstention accuracy is one, and hallucination rate is zero. These are small sample results. Citation number validity is not proof of claim support; broader evaluation remains necessary.
+$ cat mp3_eval.txt
+
+  id                              type     hit   abstained  grounded  ok
+  --------------------------------------------------------------------------
+  q1_red_headed_league_assistant  answer   ✓     ✗          ✓         ✓
+  q2_speckled_band_weapon         answer   ✓     ✗          ✓         ✓
+  q3_scandal_bohemia_adler        answer   ✓     ✗          ✓         ✓
+  q4_engineers_thumb_press        answer   ✓     ✗          ✓         ✓
+  abstain_moriarty                abstain  -     ✓          -         ✓
+  abstain_out_of_domain           abstain  -     ✓          -         ✓
+  q5_blue_carbuncle_discovery     answer   ✓     ✗          ✓         ✓
+  q6_red_headed_league_multihop   answer   ✓     ✗          ✓         ✓
+  q7_abstain_baskerville          abstain  -     ✓          -         ✓
+  --------------------------------------------------------------------------
+
+  Retrieval hit rate    : 1.0   (6 answerable questions)
+  Grounded & cited rate : 1.0   (KPI: grounded response rate)
+  Abstention accuracy   : 1.0   (3 should-abstain questions)
+  Hallucination rate    : 0.0   (KPI: hallucination rate)
